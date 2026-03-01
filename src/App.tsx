@@ -16,7 +16,6 @@ function LanguageButton({
     <button
       onClick={onClick}
       style={{
-        padding: '6px 12px',
         fontSize: '12px',
         backgroundColor: currentLanguage === language ? 'salmon' : '#ddd',
         color: currentLanguage === language ? 'white' : '#333',
@@ -97,19 +96,23 @@ Et que le bonheur continue pour nous deux 💕`,
 
   return (
     <div>
-      <div className="flex justify-center gap-16">
-        <LanguageButton
-          language="ko"
-          currentLanguage={language}
-          onClick={() => setLanguage('ko')}
-          label="한국어"
-        />
-        <LanguageButton
-          language="fr"
-          currentLanguage={language}
-          onClick={() => setLanguage('fr')}
-          label="프랑스어"
-        />
+      <div className="flex justify-center gap-x-2.5">
+        <div>
+          <LanguageButton
+            language="ko"
+            currentLanguage={language}
+            onClick={() => setLanguage('ko')}
+            label="한국어"
+          />
+        </div>
+        <div style={{ marginLeft: '20px' }}>
+          <LanguageButton
+            language="fr"
+            currentLanguage={language}
+            onClick={() => setLanguage('fr')}
+            label="프랑스어"
+          />
+        </div>
       </div>
 
       <div>
