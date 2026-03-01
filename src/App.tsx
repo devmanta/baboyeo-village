@@ -18,7 +18,7 @@ function LanguageButton({
       style={{
         padding: '6px 12px',
         fontSize: '12px',
-        backgroundColor: currentLanguage === language ? '#333' : '#ddd',
+        backgroundColor: currentLanguage === language ? 'salmon' : '#ddd',
         color: currentLanguage === language ? 'white' : '#333',
         border: 'none',
         cursor: 'pointer',
@@ -37,24 +37,33 @@ function App() {
   const [language, setLanguage] = useState<'ko' | 'fr'>('ko');
 
   const texts = {
-    ko: `사랑해.
-
-너를 처음 본 날부터
-내 마음이 너로 가득 찼어.
-
-모든 순간이 소중하고,
-너와의 시간이 가장 아름다워.
-
-영원히 함께하고 싶어. 💕`,
-    fr: `Je t'aime.
-
-Depuis le jour où je t'ai vu,
-mon cœur s'est rempli de toi.
-
-Chaque moment est précieux,
-et le temps avec toi est le plus beau.
-
-Je veux rester avec toi pour toujours. 💕`,
+    ko: `혀나 안녕? 아 옆에서 몰래?하느라 진짜 쫄렸다
+도서관 서현아 왜이렇게 좋아? 흐아ㅏㅏㅏㅏ
+너무,, 좋아,,,,,,, 하하하,,,,,,^.^ㅎㅎ,,,,,,
+나 진짜 개발 감을 잃었다… 
+이런거 진짜 30분컷이면 
+fancy하게 만들어야하는데…..
+빨리 서현아 저점매수 맨날 해야겠다 안되겠다
+(진짜 내가 서현아 옆에서 계속 응원한다)
+(필요한거 있음 말만해!!)
+잠도 못잤는데 이렇게 열심히 공부도하고!!
+너무 멋있잖아!!!!!!!!ㅠㅠ
+이렇게 글썼는데 프랑스어 제대로 번역이 될지 의문이다
+이번주도 혀나 덕분에 너무 잘보냈고
+앞으로도 행복하자💕`,
+    fr: `Hé Hyeona, coucou ! Ah, j'étais tellement stressée à faire ça en cachette à côté de toi 😂
+Seohyeon à la bibliothèque, pourquoi t'es aussi bien ?! Ahhhhh
+Je t'aime trop,,,,,, hahaha,,,,,, ^.^ hehe,,,,,,
+J'ai vraiment perdu le feeling pour le dev…
+Ce genre de truc, faudrait le faire en 30 minutes chrono et rendre ça fancy…..
+Faut que j'achète Seohyeon au plus bas tous les jours, j'ai pas le choix
+(Sérieux, je suis là à côté de toi à t'encourager en permanence)
+(Si t'as besoin de quoi que ce soit, dis-le moi !!)
+T'as même pas dormi et tu bosses autant !!
+T'es trop forte !!!!!!!! 🥹
+En écrivant tout ça je me demande si ça va vraiment bien se traduire en français
+Cette semaine encore, grâce à toi Hyeona, c'était vraiment bien
+Et que le bonheur continue pour nous deux 💕`,
   };
 
   const footers = {
@@ -81,14 +90,14 @@ Je veux rester avec toi pour toujours. 💕`,
         clearInterval(interval);
         setIsAnimating(false);
       }
-    }, 200);
+    }, 120);
 
     return () => clearInterval(interval);
   }, [isAnimating, fullText]);
 
   return (
     <div>
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-16">
         <LanguageButton
           language="ko"
           currentLanguage={language}
@@ -123,7 +132,7 @@ Je veux rester avec toi pour toujours. 💕`,
             lineHeight: '1.5',
             margin: '0',
             wordBreak: 'keep-all',
-            height: '200px',
+            height: '300px',
           }}
         >
           {displayedText}
