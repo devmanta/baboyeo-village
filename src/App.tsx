@@ -135,7 +135,7 @@ Et que le bonheur continue pour nous deux 💕`,
             lineHeight: '1.5',
             margin: '0',
             wordBreak: 'keep-all',
-            height: '300px',
+            height: '350px',
           }}
         >
           {displayedText}
